@@ -41,9 +41,9 @@ void QuadraticEquation()
 	system("cls");
 	printf_s("Введите коэффициенты a, b, c\n");
 	float a, b, c, discriminant, x1, x2;
-	scanf_s("%f", &a);
-	scanf_s("%f", &b);
-	scanf_s("%f", &c);
+	a = EnterNumber();
+	b = EnterNumber();
+	c = EnterNumber();
 
 	discriminant = powf(b, 2.0) - 4 * a * c;
 	if (discriminant < 0)
@@ -77,8 +77,27 @@ void PrintRoots(int peremCount, float x1, float x2)
 			break;
 	}
 }
+float EnterNumber()
+{
+	float a = 0;
+	char b = ' ';
+	do
+	{
+		system("cls");
+		printf_s("Введите число");
+		scanf_s("%c", &b);
+	} while (IsDigit(b));
+	b = a;
+	return a;
+}
+int IsDigit(float a) 
+{
+	if((int)b )
+
+}
 void LinearEquation()
 {
+	system("cls");
 	printf_s("Введите коэффициенты a, b,с уравнений\n");
 
 	float matrix[2][3];
